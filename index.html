@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery & Requirements</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div>
+                    <h1>Ecommerce Development Discovery & Requirements</h1>
+                    <p class="subtitle">Shopify Store Requirement Builder</p>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">Step 1 of 14</span>
+            </div>
+        </header>
+
+        <!-- Main Form Container -->
+        <main class="main-content">
+            <div class="form-container">
+                <form id="shopifyForm">
+                    <!-- Step indicators -->
+                    <div class="step-indicators" id="stepIndicators">
+                        <!-- Dynamically generated -->
+                    </div>
+
+                    <!-- Form steps will be injected here -->
+                    <div class="form-step active" id="stepContainer">
+                        <!-- Steps will be dynamically loaded -->
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="form-navigation">
+                        <button type="button" id="prevBtn" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" id="nextBtn" class="btn btn-primary">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="button" id="submitBtn" class="btn btn-success" style="display: none;">
+                            <i class="fas fa-file-pdf"></i> Generate PDF
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Summary Sidebar -->
+            <aside class="summary-sidebar">
+                <div class="summary-header">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Your Selections</h3>
+                </div>
+                <div class="summary-content" id="summaryContent">
+                    <!-- Summary will be updated dynamically -->
+                </div>
+                <div class="summary-footer">
+                    <button id="previewBtn" class="btn btn-outline">
+                        <i class="fas fa-eye"></i> Quick Preview
+                    </button>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Preview Modal -->
+        <div class="modal-overlay" id="previewModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Project Summary Preview</h2>
+                    <button class="close-modal" id="closeModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body" id="previewContent">
+                    <!-- Preview content will be injected here -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="downloadPdfBtn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                    <button class="btn btn-secondary" id="closePreviewBtn">
+                        Close Preview
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Toast -->
+        <div class="toast" id="successToast">
+            <div class="toast-content">
+                <i class="fas fa-check-circle"></i>
+                <span>Response saved successfully!</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
